@@ -231,6 +231,7 @@ function setTime(e) {
             Time[2].innerText = '00';
             Time[4].innerText = '20';
             Description.innerText = '';
+            pauseCountDown();
             break;
 
         case '5 MIN':
@@ -238,6 +239,7 @@ function setTime(e) {
             Time[2].innerText = '05';
             Time[4].innerText = '00';
             Description.innerText = '';
+            pauseCountDown();
             break;
 
         case '15 MIN':
@@ -245,6 +247,7 @@ function setTime(e) {
             Time[2].innerText = '15';
             Time[4].innerText = '00';
             Description.innerText = '';
+            pauseCountDown();
             break;
 
         case '20 MIN':
@@ -252,6 +255,7 @@ function setTime(e) {
             Time[2].innerText = '20';
             Time[4].innerText = '00';
             Description.innerText = '';
+            pauseCountDown();
             break;
 
         case '30 MIN':
@@ -259,6 +263,7 @@ function setTime(e) {
             Time[2].innerText = '30';
             Time[4].innerText = '00';
             Description.innerText = '';
+            pauseCountDown();
             break
     }
 }
