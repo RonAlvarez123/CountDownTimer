@@ -1,0 +1,309 @@
+:root {
+    --first: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    background-image: radial-gradient( #2535c4, rgb(58, 114, 218));
+    box-shadow: 0 0 5px black;
+    display: grid;
+    grid-template-rows: 10% 77% 13%;
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    transition: transform 500ms;
+}
+
+header ul {
+    display: grid;
+    font-family: 'Fredoka One', cursive;
+    gap: 1vw;
+    grid-template-columns: repeat(5, 1fr);
+    height: 50%;
+    justify-content: center;
+    padding: 0 1vw;
+    width: 100%;
+}
+
+header ul li {
+    align-items: center;
+    background-color: #040e68;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #040e68;
+    color: var(--first);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: transform 500ms;
+}
+
+header ul li:hover {
+    transform: scale(1.1);
+}
+
+main {
+    color: var(--first);
+    font-size: 5vw;
+    overflow: hidden;
+}
+
+main .timecontainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+    position: relative;
+    transition: left 500ms;
+}
+
+main .time {
+    display: flex;
+    font-family: 'Sacramento', cursive;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+main .description {
+    font-family: 'Abel', sans-serif;
+    font-size: 70%;
+}
+
+main .control-time {
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    grid-template-rows: 20% 80%;
+    height: 100%;
+    width: 100%;
+
+
+    position: relative;
+    left: 105%;
+    top: -100%;
+    transition: left 500ms;
+}
+
+.control-input {
+    align-items: center;
+    box-shadow: 0 1px 5px #040e68;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5vw;
+}
+
+.control-input p {
+    font-size: 50%;
+}
+
+.control-input p span {
+    font-size: 250%;
+}
+
+.control-input .delete-time {
+    cursor: pointer;
+    font-size: 70%;
+    transition: transform 500ms;
+}
+
+.control-input .delete-time:hover {
+    transform: scale(1.2);
+}
+
+.control-numbers {
+    display: grid;
+    gap: 2vw 8vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 2vw 4vw;
+    justify-content: space-around;
+}
+
+.control-numbers li {
+    cursor: pointer;
+    margin: auto;
+    padding: .5vw .5vw;
+    transition: transform 500ms;
+}
+
+.control-numbers li:hover {
+    transform: scale(1.2);
+}
+
+.control-numbers li:nth-child(10) {
+    grid-column: 2/3;
+}
+
+.controls {
+    align-items: center;
+    display: flex;
+}
+
+.controls ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+.controls ul li {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 3vw;
+    font-weight: bold;
+    height: 20%;
+    justify-content: center;
+    transition: transform 500ms;
+    position: relative;
+}
+
+.controls ul li:hover {
+    transform: scale(1.15);
+}
+
+.controls ul li p {
+    transition: transform 250ms;
+}
+
+.controls ul li:nth-child(2) p:nth-child(1) {
+    transform: translate(50%, 0);
+}
+
+.controls ul li:nth-child(2) p:nth-child(2) {
+    transform: translate(-50%, 150%);
+}
+
+.current {
+    background-color: var(--first);
+    border-radius: 50%;
+    box-shadow: 0 0 5px #040e68;
+    color: rgb(161, 23, 23);
+    transition: box-shadow 500ms;
+}
+
+.current:hover {
+    box-shadow: 0 0 10px #040e68;
+}
+
+@media screen and (min-width:900px) {
+    .control-numbers {
+        gap: .5vw 4vw;
+        padding: 1vw 2vw;
+    }
+    
+    .control-numbers li {
+        margin: -1% auto;
+        height: 50px;
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    .control-numbers {
+        gap: 1vw 4vw;
+        padding: 1vw 2vw;
+    }
+    
+    .control-numbers li {
+        margin: -1% auto;
+        height: 40px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .main-container {
+        width: 75vw;
+    }
+
+    main .time {
+        font-size: 250%;
+    }
+    
+    main .description {
+        font-size: 100%;
+    }
+
+    .controls ul li {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .main-container {
+        width: 100vw;
+    }
+
+    header ul li {
+        font-size: 100%;
+    }
+
+    main .time {
+        font-size: 350%;
+    }
+    
+    main .description {
+        font-size: 140%;
+    }
+
+    .control-input {
+        padding: 1vw;
+    }
+    
+    .control-input p {
+        font-size: 80%;
+    }
+    
+    .control-input p span {
+        font-size: 250%;
+    }
+    
+    .control-input .delete-time {
+        font-size: 120%;
+    }
+
+    .control-numbers li {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .main-container {
+        width: 99vw;
+    }
+
+    header ul li {
+        font-size: 80%;
+    }
+
+    main .time {
+        font-size: 400%;
+    }
+    
+    main .description {
+        font-size: 180%;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="countdowntimer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Count Down Timer</title>
+    <script defer src="countdowntimer.js"></script>
+    <script src="https://kit.fontawesome.com/f575605e28.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <ul>
+                <li>20 SEC</li>
+                <li>5 MIN</li>
+                <li>15 MIN</li>
+                <li>20 MIN</li>
+                <li>30 MIN</li>
+            </ul>
+        </header>
+        <main>
+            <div class="timecontainer">
+                <section class="time">
+                    <p>0</p>
+                    <p>:</p>
+                    <p>00</p>
+                    <p>:</p>
+                    <p>00</p>
+                </section>
+                <section class="description"></section>
+            </div>
+            <div class="control-time">
+                <div class="control-input">
+                    <p class="hour"><span>0</span>h</p>
+                    <p class="minute"><span>00</span>m</p>
+                    <p class="second"><span>00</span>s</p>
+                    <p class="delete-time"><i class="fas fa-times-circle"></i></p>
+                </div>
+                <ul class="control-numbers">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>0</li>
+                </ul>
+            </div>
+        </main>
+        <div class="controls">
+            <ul>
+                <li><i class="fas fa-hourglass-start"></i>+</li>
+                <li>
+                    <p><i class="fas fa-play-circle current"></i></p>
+                    <p><i class="fas fa-pause-circle current"></i></p>
+                </li>
+                <li><i class="fas fa-trash"></i></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
